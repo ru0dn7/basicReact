@@ -14,4 +14,5 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// reportWebVitals(console.log);
+// google의 웹 성능 측정도구인 Web Vital API를 활용하여 사용자의 실제경험을 반영하는 여러 중요 성능 지표를 측정
