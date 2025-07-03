@@ -1,9 +1,14 @@
+import { useState } from "react";
+
 export default function MyListItem({ title, imgUrl, content }) {
-  let cnt = 0;
+  // let cnt = 0;   // useState 사용으로 ↓로 수정
+  const [cnt, setCnt] = useState(0);
+
   const handleClick = () => {
-    cnt = cnt + 1
-    console.log('cnt=',cnt);
-  }
+    // cnt = cnt + 1    //useState 사용으로 ↓로 수정
+    setCnt(cnt + 1);
+    console.log("cnt=", cnt);
+  };
 
   return (
     <div className="flex w-full h-full justify-center items-start p-2 border border-slate-400">
@@ -16,7 +21,7 @@ export default function MyListItem({ title, imgUrl, content }) {
           <p>{content}</p>
         </div>
         <div className="flex justify-end items-center">
-          <span onClick={handleClick}>💗</span>
+          <span onClick={handleClick} className="cursor-pointer">💗</span>
           <span className="inline-flex mx-2 font-bold">좋아요</span>
           <span className="font-bold text-xl">{cnt}</span>
         </div>
